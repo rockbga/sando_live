@@ -275,6 +275,7 @@
   .games-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
     gap: 16px;
   }
 
@@ -285,7 +286,9 @@
     overflow: hidden;
     transition: all 0.3s;
     clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
-    aspect-ratio: 16/10;
+    /* No aspect-ratio — height is controlled by grid-auto-rows */
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: flex-end;
   }
